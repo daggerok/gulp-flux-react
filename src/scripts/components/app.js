@@ -1,11 +1,18 @@
-var React = require('react')
-var Actions = require('../actions/app')
+var React = require('react'),
+Catalog = require('../components/catalog'),
+Cart = require('../components/cart'),
+App = React.createClass({
+  render: function() {
+    return (
+      <div>
+        <h1>Lets shop!</h1>
+        <Catalog />
+        <h1>Cart</h1>
+        <Cart />
 
-module.exports = React.createClass({
-    handler: function() {
-      Actions.addItem('this is an item')
-    },
-    render: function() {
-        return <div onClick={this.handler}>Hi</div>
-    }
+      </div>
+    )
+  }
 })
+
+module.exports = App
