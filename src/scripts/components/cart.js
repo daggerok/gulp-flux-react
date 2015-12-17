@@ -3,7 +3,7 @@ Store = require('../stores/app'),
 RemoveFromCart = require('./removeFromCart'),
 IncreaseItem = require('./increaseItem'),
 DecreaseItem = require('./decreaseItem'),
-Catalog = React.createClass({
+Cart = React.createClass({
   getInitialState: function() {
     return cartItems()
   },
@@ -59,4 +59,4 @@ function cartItems() {
   return { items: Store.getCart() }
 }
 
-module.exports = Catalog
+module.exports = Cart
